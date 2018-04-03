@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <Button
+        android:text="search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/TF_location"
+        android:id="@+id/button2"
+        android:onClick="onClick" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        tools:context="com.example.akash.mapdemo.MapsActivity"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/B_school" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/B_school"
+        android:text="Schools"
+        android:onClick="onClick"
+        android:layout_below="@+id/TF_location"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/TF_location"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/B_hospital"
+        android:text="Hospital"
+        android:onClick="onClick"
+        android:layout_marginStart="16dp"
+        android:layout_below="@+id/TF_location"
+        android:layout_toEndOf="@+id/B_school" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/B_restaraunt"
+        android:onClick="onClick"
+        android:text="Restaraunt"
+        android:layout_marginStart="26dp"
+        android:layout_below="@+id/button2"
+        android:layout_toEndOf="@+id/B_hospital" />
+</RelativeLayout>
